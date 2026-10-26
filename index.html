@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f5f1">
+    <meta
+      name="description"
+      content="Prodloužení a zahuštění vlasů ve Frýdku-Místku. Keratin, micro a nano ring i V-Light. Osobní přístup Laury v Dobré."
+    >
+    <title>Prodloužení vlasů Frýdek-Místek | Laura</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <link rel="preconnect" href="https://d48-a.sdn.cz">
+    <link rel="preconnect" href="https://d34-a.sdn.cz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25211f;
+        --muted: #77716d;
+        --paper: #f8f5f1;
+        --cream: #eee8e0;
+        --rose: #c98f7d;
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 15px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      ::selection { background: #e4c8bc; color: var(--ink); }
+      .sr-only, .skip-link:not(:focus) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .skip-link:focus {
+        position: fixed;
+        z-index: 20;
+        top: 12px;
+        left: 12px;
+        padding: 10px 16px;
+        background: white;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 86px;
+        padding: 0 7.2%;
+        background: var(--paper);
+      }
+      .brand { display: inline-flex; align-items: center; gap: 11px; }
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid #b89a88;
+        border-radius: 50%;
+        color: #a77966;
+        font-family: var(--serif);
+        font-size: 23px;
+        font-style: italic;
+      }
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: #10131b;
+        object-fit: cover;
+      }
+      .brand-name { font-size: 14px; font-weight: 600; letter-spacing: .03em; line-height: 1.2; }
+      .brand-name span { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; }
+      .site-nav { display: flex; align-items: center; gap: 37px; font-size: 12px; }
+      .site-nav > a:not(.nav-contact) { transition: color .2s ease; }
+      .site-nav > a:not(.nav-contact):hover, .text-link:hover, .underlined-link:hover { color: #a56f5b; }
+      .nav-contact { padding: 10px 17px; border: 1px solid #d6cbc2; }
+      .nav-contact span { margin-left: 10px; }
+      .menu-toggle { display: none; }
+
+      .hero {
+        position: relative;
+        min-height: min(680px, calc(100vh - 86px));
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: #d7c4b6;
+      }
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(248,245,241,.94) 0%, rgba(248,245,241,.85) 37%, rgba(248,245,241,.06) 78%), url("images/gallery-1.jpeg") center 44% / cover;
+      }
+      .hero-content { position: relative; max-width: 570px; margin-left: 12%; padding: 80px 0; }
+      .eyebrow, .section-kicker { margin: 0 0 20px; color: #946c5c; font-size: 10px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; }
+      .eyebrow { display: flex; align-items: center; gap: 10px; }
+      .eyebrow span { width: 24px; height: 1px; background: var(--rose); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: var(--serif); font-weight: 500; }
+      h1 { margin-bottom: 20px; font-size: clamp(47px, 6vw, 76px); letter-spacing: -.045em; line-height: 1.07; }
+      h1 em, h2 em { color: #a97865; font-weight: 500; }
+      .hero-copy { max-width: 390px; margin-bottom: 28px; color: #5f5853; font-size: 14px; line-height: 1.85; }
+      .hero-actions { display: flex; align-items: center; gap: 25px; }
+      .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 24px; padding: 0 20px; font-size: 11px; font-weight: 600; letter-spacing: .02em; transition: transform .2s ease, background .2s ease; }
+      .button:hover { transform: translateY(-2px); }
+      .button-dark { background: var(--ink); color: white; }
+      .button-dark:hover { background: #46352e; }
+      .button-light { border: 1px solid rgba(255,255,255,.55); color: white; }
+      .button-light:hover { background: rgba(255,255,255,.12); }
+      .text-link { font-size: 11px; transition: color .2s ease; }
+      .text-link span { margin-left: 7px; }
+      .hero-rating { display: flex; align-items: center; gap: 12px; margin-top: 49px; color: #756b64; font-size: 10px; }
+      .hero-rating strong { color: var(--ink); font-weight: 600; }
+      .stars { color: #b68059; font-size: 12px; letter-spacing: 3px; }
+      .hero-note { position: absolute; right: 7.2%; bottom: 35px; color: #f7f1eb; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; writing-mode: vertical-rl; }
+      .hero-note span { margin-bottom: 10px; color: white; }
+
+      .section-wrap { width: min(1100px, 85.6%); margin: 0 auto; }
+      .intro { padding-top: 120px; padding-bottom: 125px; }
+      .intro-grid { display: grid; grid-template-columns: 1.1fr .7fr; align-items: end; gap: 80px; }
+      h2 { margin-bottom: 0; font-size: clamp(38px, 4.6vw, 56px); letter-spacing: -.035em; line-height: 1.15; }
+      .intro-text { max-width: 390px; padding-bottom: 5px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+      .intro-text p { margin-bottom: 18px; }
+      .underlined-link { display: inline-block; padding-bottom: 5px; border-bottom: 1px solid #ba9887; color: var(--ink); font-size: 11px; transition: color .2s ease; }
+      .underlined-link span { margin-left: 8px; }
+      .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 74px; }
+      .service-card { position: relative; min-height: 200px; padding: 25px 26px; border: 1px solid #e7e0d9; transition: background .2s ease, border-color .2s ease; }
+      .service-card:hover { border-color: #d4b4a5; background: #f4eee8; }
+      .card-number { color: #a77b69; font-size: 10px; letter-spacing: .1em; }
+      .service-icon { position: absolute; top: 21px; right: 24px; color: #a77b69; font-size: 19px; }
+      .service-card h3 { margin: 36px 0 8px; font-family: var(--serif); font-size: 21px; font-weight: 500; }
+      .service-card p { max-width: 240px; margin-bottom: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+
+      .methods-section { background: #292522; color: #f8f3ed; }
+      .methods-inner { display: grid; min-height: 610px; grid-template-columns: .9fr 1fr; align-items: center; gap: 11%; padding-top: 88px; padding-bottom: 88px; }
+      .methods-photo { min-height: 430px; background: url("images/gallery-2.jpeg") center / cover; }
+      .methods-content { padding: 10px 0; }
+      .methods-content .section-kicker { color: #d5a994; }
+      .methods-content h2 { margin-bottom: 19px; color: #fbf7f2; }
+      .methods-content h2 em { color: #d6a38e; }
+      .methods-copy { max-width: 390px; margin-bottom: 25px; color: #c5bcb6; font-size: 12px; line-height: 1.9; }
+      .method-list { margin: 0 0 28px; padding: 0; list-style: none; }
+      .method-list li { padding: 11px 0; border-bottom: 1px solid #48423d; color: #f4ede6; font-size: 11px; }
+      .method-list span { display: inline-block; width: 42px; color: #c99b86; font-size: 9px; }
+
+      .gallery-section { padding-top: 115px; padding-bottom: 120px; }
+      .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+      .section-heading .section-kicker { margin-bottom: 14px; }
+      .section-heading h2 { font-size: clamp(34px, 4vw, 47px); }
+      .section-heading > p { max-width: 215px; margin-bottom: 5px; color: var(--muted); font-size: 10px; }
+      .gallery-carousel { max-width: 930px; margin: 0 auto; }
+      .gallery-stage {
+        position: relative;
+        display: grid;
+        min-height: 0;
+        place-items: center;
+        padding: 12px;
+        background: #eee8e0;
+      }
+      .gallery-current {
+        display: grid;
+        width: 100%;
+        height: auto;
+        place-items: center;
+        overflow: hidden;
+        padding: 0;
+        border: 0;
+        background: transparent;
+      }
+      .gallery-current img { display: block; width: 100%; height: auto; max-height: 72vh; object-fit: contain; }
+      .gallery-current img.is-changing { animation: photo-arrive .55s cubic-bezier(.2,.75,.25,1) both; }
+      .gallery-arrow {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        border: 1px solid #cdb9aa;
+        border-radius: 50%;
+        background: rgba(248,245,241,.92);
+        color: var(--ink);
+        font-size: 27px;
+        line-height: 1;
+        cursor: pointer;
+        transform: translateY(-50%);
+        transition: color .25s ease, background .25s ease, box-shadow .25s ease;
+      }
+      .gallery-arrow:hover { box-shadow: 0 3px 14px rgba(37,33,31,.2); background: var(--ink); color: white; }
+      #gallery-previous { left: 22px; }
+      #gallery-next { right: 22px; }
+      .gallery-arrow:focus-visible, .gallery-dot:focus-visible { outline: 2px solid #946c5c; outline-offset: 4px; }
+      .gallery-controls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 3px 0; }
+      .gallery-count { color: #6c6059; font-size: 10px; font-variant-numeric: tabular-nums; letter-spacing: .12em; }
+      .gallery-dots { display: flex; align-items: center; gap: 9px; }
+      .gallery-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #c9bdb3; cursor: pointer; transition: width .25s ease, background .25s ease; }
+      .gallery-dot[aria-current="true"] { width: 24px; border-radius: 5px; background: #a97865; }
+      @keyframes photo-arrive {
+        from { opacity: .25; transform: translateX(18px) scale(.985); filter: blur(3px); }
+        to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+      }
+
+      .review-section { background: #eee8e0; }
+      .review-inner { display: grid; grid-template-columns: .7fr 1.3fr; gap: 12%; align-items: center; padding-top: 90px; padding-bottom: 90px; }
+      .review-score { padding-left: 10%; }
+      .review-score .section-kicker { margin-bottom: 11px; }
+      .score { font-family: var(--serif); font-size: 66px; letter-spacing: -.05em; line-height: 1.2; }
+      .score span { color: #8e8178; font-family: var(--sans); font-size: 14px; letter-spacing: 0; }
+      .review-score .stars { margin: 7px 0; }
+      .review-score > p:not(.section-kicker) { margin-bottom: 17px; color: var(--muted); font-size: 10px; }
+      .review-quote { position: relative; margin: 0; padding: 25px 30px 25px 0; }
+      .quote-mark { position: absolute; top: -18px; left: -40px; color: #c3937c; font-family: var(--serif); font-size: 67px; line-height: 1; }
+      .review-quote blockquote { max-width: 570px; margin: 0 0 25px; font-family: var(--serif); font-size: clamp(20px, 2.3vw, 27px); line-height: 1.55; }
+      .review-quote figcaption { display: flex; align-items: center; gap: 12px; }
+      .review-avatar { display: grid; width: 35px; height: 35px; place-items: center; border-radius: 50%; background: #d8b9a8; color: #fff; font-family: var(--serif); }
+      .review-quote figcaption strong, .review-quote figcaption small { display: block; }
+      .review-quote figcaption strong { font-size: 10px; }
+      .review-quote figcaption small { color: var(--muted); font-size: 9px; }
+      .review-more {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding-bottom: 85px;
+      }
+      .review-card { padding: 25px 27px; border: 1px solid #ddd3c9; background: rgba(248,245,241,.45); }
+      .review-card .stars { margin-bottom: 13px; }
+      .review-card blockquote { margin: 0 0 22px; color: #49413b; font-family: var(--serif); font-size: 17px; line-height: 1.65; }
+      .review-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-top: 14px; border-top: 1px solid #e3dcd5; }
+      .review-card figcaption strong { font-size: 10px; }
+      .review-card figcaption time { color: var(--muted); font-size: 9px; }
+
+      .contact-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: 13%; padding-top: 120px; padding-bottom: 120px; }
+      .contact-heading .section-kicker { margin-bottom: 16px; }
+      .contact-heading h2 { margin-bottom: 16px; }
+      .contact-heading > p:not(.section-kicker) { max-width: 340px; margin-bottom: 25px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+      .contact-heading .button { min-width: 205px; }
+      .contact-details { border-top: 1px solid #e3dcd5; }
+      .contact-row { display: grid; grid-template-columns: 135px 1fr; gap: 10px; padding: 19px 0; border-bottom: 1px solid #e3dcd5; }
+      .contact-label { color: #9a7768; font-size: 10px; }
+      .contact-row div { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; font-size: 11px; }
+      .contact-row div > span { color: var(--muted); }
+      .contact-row div > a:not(:first-child), .contact-row div > a:first-child:not(:only-child) { color: #805f50; }
+      .contact-row div > a { overflow-wrap: anywhere; }
+      .contact-row div > a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+      .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 25px 7.2%; border-top: 1px solid #e7e0d9; }
+      .footer-brand .brand-logo { width: 34px; height: 34px; }
+      .footer-brand .brand-name { font-size: 12px; }
+      .footer-brand .brand-name span { font-size: 8px; }
+      .site-footer > p, .site-footer > small { margin: 0; color: var(--muted); font-size: 9px; }
+      .site-footer > a:not(.brand) { font-size: 10px; }
+      .site-footer > a:not(.brand) span { margin-left: 6px; }
+
+      @media (max-width: 760px) {
+        .site-header { min-height: 72px; padding: 0 6%; }
+        .menu-toggle { display: flex; width: 40px; height: 40px; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1px solid #ded4cc; background: transparent; }
+        .menu-toggle span:not(.sr-only) { width: 16px; height: 1px; background: var(--ink); }
+        .site-nav { position: absolute; top: 72px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 12px 6% 20px; background: var(--paper); box-shadow: 0 12px 15px rgba(40,30,25,.08); }
+        .site-nav.is-open { display: flex; flex-direction: column; }
+        .site-nav > a { padding: 12px 0; }
+        .site-nav .nav-contact { margin-top: 8px; padding: 10px 13px; }
+        .hero { min-height: 680px; align-items: flex-end; }
+        .hero-image { background-image: linear-gradient(0deg, rgba(248,245,241,.97) 0%, rgba(248,245,241,.91) 45%, rgba(248,245,241,.03) 100%), url("images/gallery-1.jpeg"); background-position: 57% center; }
+        .hero-content { margin: 0; padding: 80px 7% 55px; }
+        h1 { font-size: clamp(45px, 12vw, 65px); }
+        .hero-copy { max-width: 370px; }
+        .hero-rating { margin-top: 32px; }
+        .hero-note { display: none; }
+        .section-wrap { width: 86%; }
+        .intro { padding-top: 82px; padding-bottom: 85px; }
+        .intro-grid { grid-template-columns: 1fr; gap: 18px; }
+        .intro-text { max-width: 480px; }
+        .service-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 40px; }
+        .service-card { min-height: 170px; padding: 20px 22px; }
+        .service-card h3 { margin-top: 26px; }
+        .methods-inner { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; padding-bottom: 70px; }
+        .methods-photo { min-height: 370px; }
+        .methods-content { padding: 0; }
+        .gallery-section { padding-top: 80px; padding-bottom: 82px; }
+        .section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+        .section-heading > p { margin: 0; }
+        .gallery-stage { padding: 8px; }
+        .gallery-current img { max-height: 65vh; }
+        .gallery-arrow { width: 40px; height: 40px; font-size: 23px; }
+        #gallery-previous { left: 15px; }
+        #gallery-next { right: 15px; }
+        .review-inner { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; padding-bottom: 70px; }
+        .review-score { padding-left: 0; }
+        .review-quote { padding: 15px 0 0 25px; }
+        .quote-mark { left: -7px; top: -2px; font-size: 48px; }
+        .review-more { grid-template-columns: 1fr; gap: 12px; padding-bottom: 65px; }
+        .review-card { padding: 22px; }
+        .contact-section { grid-template-columns: 1fr; gap: 45px; padding-top: 82px; padding-bottom: 82px; }
+        .site-footer { flex-wrap: wrap; padding: 22px 7%; }
+        .site-footer > p { order: 3; width: 100%; }
+      }
+
+      @media (max-width: 420px) {
+        .hero-actions { align-items: flex-start; flex-direction: column; gap: 17px; }
+        .hero { min-height: 720px; }
+        .gallery-stage { padding: 5px; }
+        .gallery-current img { max-height: 62vh; }
+        .gallery-arrow { width: 34px; height: 34px; font-size: 20px; }
+        #gallery-previous { left: 11px; }
+        #gallery-next { right: 11px; }
+        .gallery-controls { padding-top: 14px; }
+        .contact-row { grid-template-columns: 100px 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Přejít na obsah</a>
+
+    <header class="site-header">
+      <a class="brand" href="#uvod" aria-label="Prodloužení vlasů Laura – úvod">
+        <img class="brand-logo" src="logo.jpg" alt="">
+        <span class="brand-name">Laura<span>prodloužení vlasů</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Otevřít navigaci</span>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
+        <a href="#sluzby">Služby</a>
+        <a href="#metody">Metody</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#recenze">Recenze</a>
+        <a class="nav-contact" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="uvod">
+        <div class="hero-image" role="img" aria-label="Dlouhé, přirozeně působící vlasy"></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> Frýdek-Místek · Dobrá</p>
+          <h1>Vlasy, ve kterých<br>se budete <em>cítit své.</em></h1>
+          <p class="hero-copy">Jemné prodloužení a zahuštění vlasů s citem pro přirozený výsledek. Společně najdeme délku i metodu, která vám bude sedět.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="tel:+420734731896">Domluvit konzultaci <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#sluzby">Objevte služby <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-rating">
+            <span class="stars" aria-label="5 z 5 hvězdiček">★★★★★</span>
+            <span><strong>4,9 / 5</strong> · 8 hodnocení</span>
+          </div>
+        </div>
+        <div class="hero-note"><span>01</span> Krása v každém prameni</div>
+      </section>
+
+      <section class="intro section-wrap" id="sluzby">
+        <div class="section-kicker">Krása, která je opravdu vaše</div>
+        <div class="intro-grid">
+          <h2>Více délky.<br><em>Více sebevědomí.</em></h2>
+          <div class="intro-text">
+            <p>Každé vlasy jsou jiné. Proto začínáme osobní konzultací a vybíráme řešení podle vašich přání, typu vlasů i životního stylu.</p>
+            <a class="underlined-link" href="#kontakt">Pojďme najít to pravé <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="card-number">01</span>
+            <span class="service-icon" aria-hidden="true">↗</span>
+            <h3>Prodloužení vlasů</h3>
+            <p>Vysněná délka, která přirozeně splyne s vašimi vlasy.</p>
+          </article>
+          <article class="service-card">
+            <span class="card-number">02</span>
+            <span class="service-icon" aria-hidden="true">✳</span>
+            <h3>Zahuštění vlasů</h3>
+            <p>Více objemu a plnější účes s lehkým, přirozeným pocitem.</p>
+          </article>
+          <article class="service-card">
+            <span class="card-number">03</span>
+            <span class="service-icon" aria-hidden="true">♡</span>
+            <h3>Vlasy k prodeji</h3>
+            <p>Prodej vlasů k prodloužení i výkup vlasů.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="methods-section" id="metody">
+        <div class="methods-inner section-wrap">
+          <div class="methods-photo" role="img" aria-label="Detail dlouhých vlasů"></div>
+          <div class="methods-content">
+            <p class="section-kicker">Šetrně a s citem</p>
+            <h2>Metoda, která<br>vám <em>padne.</em></h2>
+            <p class="methods-copy">Pracuji s osvědčenými technikami prodlužování a zahušťování. Společně vybereme tu nejvhodnější pro vaše vlasy a očekávání.</p>
+            <ul class="method-list">
+              <li><span>01</span> Keratin za tepla – mikrospoje</li>
+              <li><span>02</span> Micro ring</li>
+              <li><span>03</span> Nano ring</li>
+              <li><span>04</span> V-Light</li>
+            </ul>
+            <a class="button button-light" href="tel:+420734731896">Zeptat se na metodu <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section section-wrap" id="galerie">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Malá inspirace</p>
+            <h2>Proměny, které <em>mluví za vše.</em></h2>
+          </div>
+          <p>Prohlédněte si proměny pomocí šipek nebo teček.</p>
+        </div>
+        <div class="gallery-carousel" id="gallery-carousel" aria-label="Fotogalerie proměn">
+          <div class="gallery-stage" tabindex="0" aria-label="Fotografie. Použijte šipky na klávesnici pro změnu.">
+            <button class="gallery-arrow" id="gallery-previous" type="button" aria-label="Předchozí fotografie">‹</button>
+            <div class="gallery-current">
+              <img id="gallery-image" src="images/gallery-1.jpeg" alt="Dlouhé vlasy po prodloužení">
+            </div>
+            <button class="gallery-arrow" id="gallery-next" type="button" aria-label="Další fotografie">›</button>
+          </div>
+          <div class="gallery-controls">
+            <span class="gallery-count" id="gallery-count" aria-live="polite">01 / 05</span>
+            <div class="gallery-dots" aria-label="Vybrat fotografii">
+              <button class="gallery-dot" type="button" aria-label="Fotografie 1" aria-current="true" data-gallery-index="0"></button>
+              <button class="gallery-dot" type="button" aria-label="Fotografie 2" aria-current="false" data-gallery-index="1"></button>
+              <button class="gallery-dot" type="button" aria-label="Fotografie 3" aria-current="false" data-gallery-index="2"></button>
+              <button class="gallery-dot" type="button" aria-label="Fotografie 4" aria-current="false" data-gallery-index="3"></button>
+              <button class="gallery-dot" type="button" aria-label="Fotografie 5" aria-current="false" data-gallery-index="4"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" id="recenze">
+        <div class="review-inner section-wrap">
+          <div class="review-score">
+            <p class="section-kicker">Vaše spokojenost</p>
+            <div class="score">4,9<span>/5</span></div>
+            <div class="stars" aria-label="5 z 5 hvězdiček">★★★★★</div>
+            <p>Fantastické · 8 hodnocení</p>
+            <a class="underlined-link" href="https://www.firmy.cz/detail/13808189-prodlouzeni-vlasu-frydek-mistek-dobra.html#hodnoceni" target="_blank" rel="noreferrer">Všechna hodnocení <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="review-quote">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>„S prodloužením vlasů jsem naprosto spokojená! Od první návštěvy jsem se cítila v dobrých rukou a výsledek předčil moje očekávání. Vlasy vypadají nádherně, přirozeně a jsou perfektně upravené.“</blockquote>
+            <figcaption><span class="review-avatar">M</span><span><strong>Marie Zuczková</strong><small>Ověřené hodnocení</small></span></figcaption>
+          </figure>
+        </div>
+        <div class="review-more section-wrap">
+          <figure class="review-card">
+            <div class="stars" aria-label="5 z 5 hvězdiček">★★★★★</div>
+            <blockquote>„Vřele doporučuji všem holkám a ženám, které chtějí prodloužení vlasů. Byla jsem spokojená a velmi nadšená, Laura má zlaté ručičky a umí s vlásky kouzlit. Přijela jsem až z Opavy a měla jsem opravdu relax i překvapení z mojí proměny. Je úžasná a velmi milá…“</blockquote>
+            <figcaption><strong>Montagova Michaela</strong><time datetime="2026-10-20">20. října 2026</time></figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="stars" aria-label="5 z 5 hvězdiček">★★★★★</div>
+            <blockquote>„Vyzkoušela jsem hodně kadeřnic. Ale zatím jsem zde nejvíc spokojená ❤️ Slečna je velmi pečlivá a vím, že mé vlasy jsou v dobrých rukou.“</blockquote>
+            <figcaption><strong>Anita Zemanova</strong><time datetime="2026-10-13">13. října 2026</time></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="kontakt">
+        <div class="contact-heading">
+          <p class="section-kicker">Vaše proměna začíná rozhovorem</p>
+          <h2>Máte otázku?<br><em>Napište mi.</em></h2>
+          <p>Ozvěte se a společně probereme vaše přání, možnosti i vhodný termín.</p>
+          <a class="button button-dark" href="tel:+420734731896">+420 734 731 896 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-details">
+          <div class="contact-row">
+            <span class="contact-label">Adresa</span>
+            <div><strong>Dobrá 899</strong><span>739 51 Dobrá</span><a href="https://mapy.com/cs/zakladni?planovani-trasy&amp;x=18.403326&amp;y=49.674424&amp;z=17&amp;rc=9qSLPxV3u.&amp;rs=&amp;rs=firm&amp;ri=&amp;ri=13808189&amp;mrp=%7B%22c%22%3A%20111%7D&amp;rt=&amp;rt=" target="_blank" rel="noreferrer">Naplánovat trasu ↗</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">E-mail</span>
+            <div><a href="mailto:Laura.isa.paskova@seznam.cz">Laura.isa.paskova@seznam.cz</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Otevírací doba</span>
+            <div>
+              <span><strong>Pondělí</strong> · 8:00–20:00</span>
+              <span><strong>Úterý</strong> · 8:00–20:00</span>
+              <span><strong>Středa</strong> · 8:00–20:00</span>
+              <span><strong>Čtvrtek</strong> · 8:00–20:00</span>
+              <span><strong>Pátek</strong> · 8:00–20:00</span>
+              <span><strong>Sobota</strong> · 8:00–20:00</span>
+              <span><strong>Neděle</strong> · 8:00–20:00</span>
+              <span>Po předchozí domluvě</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Sledujte mě</span>
+            <div><a href="https://www.facebook.com/people/Prodlou%C5%BEen%C3%AD-vlas%C5%AF-Fr%C3%BDdek-M%C3%ADstek/61569283686353/" target="_blank" rel="noreferrer">Facebook ↗</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Další informace</span>
+            <div><span>IČO: 23100222</span><span>Platba kartou</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#uvod">
+        <img class="brand-logo" src="logo.jpg" alt="">
+        <span class="brand-name">Laura<span>prodloužení vlasů</span></span>
+      </a>
+      <p>Prodloužení a zahuštění vlasů · Frýdek-Místek</p>
+      <a href="tel:+420734731896">Zavolat <span aria-hidden="true">↗</span></a>
+      <small>© <span id="current-year">2026</span> Laura</small>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector(".site-nav");
+      const galleryImage = document.querySelector("#gallery-image");
+      const galleryCount = document.querySelector("#gallery-count");
+      const galleryDots = [...document.querySelectorAll(".gallery-dot")];
+      const galleryPhotos = [
+        { src: "images/gallery-1.jpeg", alt: "Dlouhé vlasy po prodloužení" },
+        { src: "images/gallery-2.jpeg", alt: "Výsledek prodloužení vlasů" },
+        { src: "images/gallery-3.jpeg", alt: "Přirozený vzhled po prodloužení" },
+        { src: "images/gallery-4.jpeg", alt: "Detail dlouhých vlasů" },
+        { src: "images/gallery-5.jpeg", alt: "Vlasy po proměně v salonu" },
+      ];
+      let currentPhoto = 0;
+
+      function showGalleryPhoto(index) {
+        currentPhoto = (index + galleryPhotos.length) % galleryPhotos.length;
+        const photo = galleryPhotos[currentPhoto];
+        galleryImage.classList.remove("is-changing");
+        galleryImage.src = photo.src;
+        galleryImage.alt = photo.alt;
+        galleryCount.textContent = `${String(currentPhoto + 1).padStart(2, "0")} / ${String(galleryPhotos.length).padStart(2, "0")}`;
+        galleryDots.forEach((dot, dotIndex) => {
+          dot.setAttribute("aria-current", String(dotIndex === currentPhoto));
+        });
+        void galleryImage.offsetWidth;
+        galleryImage.classList.add("is-changing");
+      }
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.querySelector(".sr-only").textContent = isOpen ? "Otevřít navigaci" : "Zavřít navigaci";
+        siteNav.classList.toggle("is-open", !isOpen);
+      });
+
+      siteNav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          siteNav.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.querySelector(".sr-only").textContent = "Otevřít navigaci";
+        }
+      });
+
+      document.querySelector("#gallery-previous").addEventListener("click", () => {
+        showGalleryPhoto(currentPhoto - 1);
+      });
+      document.querySelector("#gallery-next").addEventListener("click", () => {
+        showGalleryPhoto(currentPhoto + 1);
+      });
+      galleryDots.forEach((dot) => {
+        dot.addEventListener("click", () => showGalleryPhoto(Number(dot.dataset.galleryIndex)));
+      });
+      document.querySelector(".gallery-stage").addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          showGalleryPhoto(currentPhoto - 1);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          showGalleryPhoto(currentPhoto + 1);
+        }
+      });
+      document.querySelector("#current-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
